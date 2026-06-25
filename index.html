@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Gerador de Senhas Seguras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Gerador de Senhas</h1>
+        <p class="subtitle">Crie senhas fortes com um clique</p>
 
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <button id="copyBtn" title="Copiar senha">📋</button>
+        </div>
+
+        <div class="strength-bar">
+            <div id="strengthFill"></div>
+            <span id="strengthText">Força: -</span>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label for="length">Comprimento:</label>
+                <input type="number" id="length" value="16" min="8" max="128">
+            </div>
+
+            <div class="option-group checkboxes">
+                <label><input type="checkbox" id="uppercase" checked> Maiúsculas (A-Z)</label>
+                <label><input type="checkbox" id="lowercase" checked> Minúsculas (a-z)</label>
+                <label><input type="checkbox" id="numbers" checked> Números (0-9)</label>
+                <label><input type="checkbox" id="symbols" checked> Símbolos (!@#$%^&*)</label>
+                <label><input type="checkbox" id="ambiguous" checked> Evitar ambíguos (ex: il1O0)</label>
+            </div>
+        </div>
+
+        <button id="generateBtn">⚡ Gerar Senha</button>
+
+        <div class="info-section">
+            <h2>📌 Prompt utilizado</h2>
+            <blockquote>
+                "Crie um gerador de senhas seguro com HTML, CSS e JS separados. Deve permitir escolher comprimento (8-128), incluir maiúsculas, minúsculas, números e símbolos, com opção de evitar caracteres ambíguos. Mostre um indicador visual de força (fraca, média, forte, excelente) baseado em comprimento e variedade de caracteres. Inclua botão para copiar a senha e design responsivo. Siga as boas práticas de segurança (ex: usar Math.random com Crypto.getRandomValues para melhor entropia)."
+            </blockquote>
+
+            <h2>🔗 Repositório GitHub Pages</h2>
+            <p>
+                <a href="https://seu-usuario.github.io/gerador-senhas/" target="_blank">
+                    https://seu-usuario.github.io/gerador-senhas/
+                </a>
+            </p>
+            <p><small>Substitua "seu-usuario" pelo seu nome de usuário do GitHub.</small></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
